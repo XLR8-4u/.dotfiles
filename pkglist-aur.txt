@@ -1,0 +1,5 @@
+brave-bin
+cbonsai
+peaclock
+yay
+yay-debug

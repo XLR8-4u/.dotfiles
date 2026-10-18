@@ -1,0 +1,82 @@
+configuration {
+    modes: "drun,run,window";
+    font: "Monocraft 12";
+    show-icons: true;
+    display-drun: "󰀻";
+    display-run: "󰁔";
+    display-window: "󱂬";
+    drun-display-format: "{name}";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Background: #333748 with 70% opacity (B3) */
+    bg:                  #24273aBF;
+    bg-selected:         #363a4f;
+    fg:                  #cad3f5;
+    accent:              #b7bdf8;
+    
+    background-color:    transparent;
+    text-color:          @fg;
+    margin:              0;
+    padding:             0;
+    spacing:             0;
+}
+
+window {
+    width:               600px;
+    background-color:    @bg;
+    border-radius:       16px;
+    border:              2px;
+    border-color:        @bg-selected;
+}
+
+mainbox {
+    padding:             30px;
+    children:            [ inputbar, listview ];
+}
+
+inputbar {
+    margin:              0 0 20px 0;
+    children:            [ prompt, entry ];
+    background-color:    @bg-selected;
+    border-radius:       10px;
+    padding:             10px;
+}
+
+prompt {
+    padding:             0 10px 0 5px;
+    text-color:          @accent;
+}
+
+entry {
+    placeholder:         "Search...";
+    placeholder-color:   #62677e;
+}
+
+listview {
+    lines:               8;
+    columns:             1;
+    fixed-height:        false;
+    spacing:             5px;
+}
+
+element {
+    padding:             8px 12px;
+    border-radius:       8px;
+}
+
+element selected {
+    background-color:    @bg-selected;
+    text-color:          @accent;
+}
+
+element-icon {
+    size:                24px;
+    margin:              0 10px 0 0;
+}
+
+element-text {
+    vertical-align:      0.5;
+}
